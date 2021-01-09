@@ -21,7 +21,8 @@ function StartAR(image) {
         navigator.getUserMedia(
             { video: {} },
             stream => video.srcObject = stream,
-            //err => console.error(err)
+            console.log("reached line 24")
+            err => console.error(err)
         ).then(alert("Loaded"));
     }
 
