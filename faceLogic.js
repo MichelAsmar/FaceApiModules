@@ -13,7 +13,7 @@ function StartAR(image) {
     Promise.all([
         faceapi.nets.tinyFaceDetector.loadFromUri('https://github.com/MichelAsmar/FaceApiModules.git'),
         faceapi.nets.faceLandmark68Net.loadFromUri('https://github.com/MichelAsmar/FaceApiModules.git'),
-        faceapi.nets.faceRecognitionNet.loadFromUri('https://github.com/MichelAsmar/FaceApiModules.git),
+        faceapi.nets.faceRecognitionNet.loadFromUri('https://github.com/MichelAsmar/FaceApiModules.git'),
         faceapi.nets.faceExpressionNet.loadFromUri('https://github.com/MichelAsmar/FaceApiModules.git')
     ]).then(startVideo)
 
