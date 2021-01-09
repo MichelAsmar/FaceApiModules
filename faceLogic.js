@@ -9,7 +9,7 @@ var found = false;
 
 function StartAR(image) {
     const video = document.getElementById('video')
-
+console.log("starting reading modules");
     Promise.all([
         faceapi.nets.tinyFaceDetector.loadFromUri('https://raw.githubusercontent.com/MichelAsmar/FaceApiModules/main/tiny_face_detector_model-weights_manifest.json'),
         faceapi.nets.faceLandmark68Net.loadFromUri('https://raw.githubusercontent.com/MichelAsmar/FaceApiModules/main/face_landmark_68_model-weights_manifest.json'),
@@ -21,7 +21,6 @@ console.log("all modules are loaded now, starting video after this line");
         navigator.getUserMedia(
             { video: {} },
             stream => video.srcObject = stream,
-            console.log("reached line 24");
             err => console.error(err)
         ).then(alert("Loaded"));
     }
