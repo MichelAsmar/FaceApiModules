@@ -11,10 +11,10 @@ function StartAR(image) {
     const video = document.getElementById('video')
 
     Promise.all([
-        faceapi.nets.tinyFaceDetector.loadFromUri('https://github.com/MichelAsmar/FaceApiModules.git'),
-        faceapi.nets.faceLandmark68Net.loadFromUri('https://github.com/MichelAsmar/FaceApiModules.git'),
-        faceapi.nets.faceRecognitionNet.loadFromUri('https://github.com/MichelAsmar/FaceApiModules.git'),
-        faceapi.nets.faceExpressionNet.loadFromUri('https://github.com/MichelAsmar/FaceApiModules.git')
+        faceapi.nets.tinyFaceDetector.loadFromUri('https://github.com/MichelAsmar/FaceApiModules/blob/main'),
+        faceapi.nets.faceLandmark68Net.loadFromUri('https://github.com/MichelAsmar/FaceApiModules/blob/main'),
+        faceapi.nets.faceRecognitionNet.loadFromUri('https://github.com/MichelAsmar/FaceApiModules/blob/main'),
+        faceapi.nets.faceExpressionNet.loadFromUri('https://github.com/MichelAsmar/FaceApiModules/blob/main')
     ]).then(startVideo)
 
     function startVideo() {
