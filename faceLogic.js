@@ -16,12 +16,12 @@ function StartAR(image) {
         faceapi.nets.faceRecognitionNet.loadFromUri('https://raw.githubusercontent.com/MichelAsmar/FaceApiModules/main/face_recognition_model-weights_manifest.json'),
         faceapi.nets.faceExpressionNet.loadFromUri('https://raw.githubusercontent.com/MichelAsmar/FaceApiModules/main/face_expression_model-weights_manifest.json')
     ]).then(startVideo)
-
+console.log("all modules are loaded now, starting video after this line");
     function startVideo() {
         navigator.getUserMedia(
             { video: {} },
             stream => video.srcObject = stream,
-            console.log("reached line 24")
+            console.log("reached line 24");
             err => console.error(err)
         ).then(alert("Loaded"));
     }
